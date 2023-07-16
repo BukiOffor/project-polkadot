@@ -38,7 +38,7 @@ next-env.d.ts
 /.turbo
 
 # vscode
-.vscode/*
+/.vscode/
 
 # prettier
 /.prettierrc
@@ -46,3 +46,5 @@ next-env.d.ts
 # next.js
 /.next/
 
+
+.vercel
