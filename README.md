@@ -1,6 +1,7 @@
 # project-polkadot
 
 ## Name and summary of the project
+
 A decentralized content streaming platform that allows users to stream content from their favorite creators and also allows creators to earn from their content.
 
 ___
