@@ -1,10 +1,10 @@
-# project-polkadot
+# project-Polkadot
 
 **Project Link**: 👉 [Project Polkadot](https://project-polkadot-zeta.vercel.app/)
 
 ## Name and summary of the project
 
-A decentralized content streaming platform that allows users to stream content from their favorite creators and also allows creators to earn from their content.
+A decentralized content streaming platform that allows users to stream content from their favourite creators and also allows creators to earn from their content.
 
 ---
 
@@ -16,7 +16,7 @@ A decentralized content streaming platform that allows users to stream content f
 | :--: | :---------------------: | :----------------------------: | :-----------------------------: | :------------------: |
 |  1   | Chukwuemeka Nnanna Echi | <https://github.com/CEN-Smart> | <nnanna.echi018@uniport.edu.ng> |  FrontEnd Developer  |
 |  2   |       Ebuka Offor       | <https://github.com/BukiOffor> |     <buki.offor@gmail.com>      | Blockchain Developer |
-|  3   | Chukwuemeka Nnanna Echi |            @emekaeu            |           @BukiOffor            |  BackEnd Developer   |
+|  3   | Chikodinaka Ann Anyanwu | <https://github.com/Chikodiann>|   <chikodiann@gmail.com>        |  BackEnd Developer   |
 |  4   | Chukwuemeka Nnanna Echi |            @emekaeu            |           @BukiOffor            |  BackEnd Developer   |
 |  5   | Chukwuemeka Nnanna Echi |            @emekaeu            |           @BukiOffor            |  BackEnd Developer   |
 
@@ -30,13 +30,13 @@ Mass Adoption of BlockChain
 
 ## An overview of what problem is being addressed
 
-The problem of centralized content streaming platforms like YouTube, Netflix, etc. is that they are centralized and are controlled by a single entity. This means that the content creators have to follow the rules of the platform and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time.
+The problem with centralized content streaming platforms like YouTube, Netflix, etc. is that they are centralized and are controlled by a single entity. This means that the content creators have to follow the rules of the platform and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time. This is a problem because the content creators are not in control of their content and also the platform can decide to take down a creator's content at any time.
 
 ---
 
-## Sponsored Challenges to be considered for and an explanation of how the project uses the technology/application
+## Sponsored Challenges to be considered and an explanation of how the project uses the technology/application
 
-The project uses the Polkadot technology to create a decentralized content streaming platform that allows users to stream content from their favorite creators and also allows creators to earn from their content.
+The project uses the Polkadot technology to create a decentralized content streaming platform that allows users to stream content from their favourite creators and also allows creators to earn from their content.
 
 ---
 
@@ -46,7 +46,7 @@ The project will be open-sourced and will be available on GitHub. The project wi
 
 ---
 
-## List of tech stack
+## List of the tech stack
 
 - Next.js
 - Chakra UI
