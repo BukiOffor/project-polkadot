@@ -11,7 +11,7 @@ ___
 | S/NO | Team Mates | GitHub handle | Email | Role |
 | :---: | :---: | :---: | :---: | :---: |
 | 1 | Chukwuemeka Nnanna Echi | <https://github.com/CEN-Smart> | <nnanna.echi018@uniport.edu.ng> | FrontEnd Developer |
-| 2 | Ebuka C Offor | <https://github.com/BukiOffor> | <buki.offor@gmail.com> | Blockchain Developer |
+| 2 | Ebuka Offor | <https://github.com/BukiOffor> | <buki.offor@gmail.com> | Blockchain Developer |
 | 3 | Chukwuemeka Nnanna Echi | @emekaeu | @BukiOffor | BackEnd Developer |
 | 4 | Chukwuemeka Nnanna Echi | @emekaeu | @BukiOffor | BackEnd Developer |
 | 5 | Chukwuemeka Nnanna Echi | @emekaeu | @BukiOffor | BackEnd Developer |
