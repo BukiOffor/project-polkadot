@@ -12,13 +12,13 @@ A decentralized content streaming platform that allows users to stream content f
 
 <!-- Tables -->
 
-| S/NO |       Team Mates        |         GitHub handle          |              Email              |         Role         |
-| :--: | :---------------------: | :----------------------------: | :-----------------------------: | :------------------: |
-|  1   | Chukwuemeka Nnanna Echi | <https://github.com/CEN-Smart> | <nnanna.echi018@uniport.edu.ng> |  FrontEnd Developer  |
-|  2   |       Ebuka Offor       | <https://github.com/BukiOffor> |     <buki.offor@gmail.com>      | Blockchain Developer |
-|  3   | Chikodinaka Ann Anyanwu | <https://github.com/Chikodiann>|   <chikodiann@gmail.com>        |  BackEnd Developer   |
-|  4   | Chukwuemeka Nnanna Echi |            @emekaeu            |           @BukiOffor            |  BackEnd Developer   |
-|  5   | Chukwuemeka Nnanna Echi |            @emekaeu            |           @BukiOffor            |  BackEnd Developer   |
+| S/NO |       Team Mates        |          GitHub handle          |              Email              |         Role         |
+| :--: | :---------------------: | :-----------------------------: | :-----------------------------: | :------------------: |
+|  1   | Chukwuemeka Nnanna Echi | <https://github.com/CEN-Smart>  | <nnanna.echi018@uniport.edu.ng> |  FrontEnd Developer  |
+|  2   |       Ebuka Offor       | <https://github.com/BukiOffor>  |     <buki.offor@gmail.com>      | Blockchain Developer |
+|  3   | Chikodinaka Ann Anyanwu | <https://github.com/Chikodiann> |     <chikodiann@gmail.com>      |  BackEnd Developer   |
+|  4   | Chukwuemeka Nnanna Echi |            @emekaeu             |           @BukiOffor            |  BackEnd Developer   |
+|  5   | Chukwuemeka Nnanna Echi |            @emekaeu             |           @BukiOffor            |  BackEnd Developer   |
 
 ---
 
@@ -53,11 +53,13 @@ The project will be open-sourced and will be available on GitHub. The project wi
 - TypeScript
 - Java
 - Spring Boot
-- Blockchain
+- Solidity
+- JavaScript
+- Tailwind CSS
 
 ---
 
 ## Log-in credentials for dummy account to access project demo/prototype
 
-- Email: `nnanna.echi018@uniport.edu.ng`
+- Email: `example@mail.com`
 - Password: `password`
