@@ -6,8 +6,7 @@ require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 
-const goerli_rpc = process.env.goerli_rpc_url
-const goerli_pk = process.env.goerli_pk
+const privateKey = process.env.goerli_pk
 const api_key = process.env.api_key
 const coinmarketcap = process.env.coinmarketcap
 
@@ -20,11 +19,20 @@ module.exports = {
   },
   defaultNetwork: "hardhat",
   networks : {
-    goerli: {
-      url:  goerli_rpc , 
-      accounts: [goerli_pk,],
-      chainId: 5,
-      blockConfirmations : 6
+    moonbeam: {
+      url: '',//TODO
+      chainId: 1287, // 0x507 in hex,
+      accounts: [privateKey]
+    },
+    moonbase: {
+      url: 'https://rpc.api.moonbase.moonbeam.network',
+      chainId: 1287, // 0x507 in hex,
+      accounts: [privateKey]
+    },
+    dev: {
+      url: 'http://127.0.0.1:9944',
+      chainId: 1281, // (hex: 0x501),
+      accounts: [privateKey]
     },
     
   },

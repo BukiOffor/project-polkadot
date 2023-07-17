@@ -9,7 +9,7 @@ const networkConfig = {
     }
 }
 
-const developmentChains = ["hardhat", "localhost","moon-beam","as-tar"]
+const developmentChains = ["hardhat", "localhost","dev","as-tar"]
 
 
 module.exports = {
