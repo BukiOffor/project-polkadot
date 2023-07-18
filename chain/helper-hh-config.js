@@ -1,15 +1,15 @@
 const networkConfig = {
-    5 : {
-        name: "goerli",
-        ethUsdPrice: "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e"
+    1284 : {
+        name: "MoonBeam",
+        ethUsdPrice: "0x4497B606be93e773bbA5eaCFCb2ac5E2214220Eb"
     },
-    1 : {
-        name : "etherum",
-        ethUsdPrice : "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+    1287 : {
+        name : "Moonbase Alpha",
+        ethUsdPrice : "0x537879A0beA294c1ce04161Ae827919e92C23e92"
     }
 }
 
-const developmentChains = ["hardhat", "localhost","dev","as-tar"]
+const developmentChains = ["hardhat", "localhost","dev",]
 
 
 module.exports = {
