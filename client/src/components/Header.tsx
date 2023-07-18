@@ -10,24 +10,20 @@ const Header = () => {
           <Logo />
           <Button className='btn'>Sign In</Button>
         </Flex>
-        <Center className='w-4/5 mx-auto mt-[10%]'>
+        <Center className='w-3/4 mx-auto mt-[5%]'>
           <Box className='text-zinc-50 text-center space-y-4'>
             <Heading as='h1' className='font-bold' fontSize={{
               base: '2xl',
               md: '4xl',
               lg: '6xl'
-            }}>Stream your content to the world</Heading>
-            <Text fontSize={{
+            }}>Discover local events that spark your passion</Heading>
+            <Text className=' w-[73%] mx-auto' fontSize={{
               base: 'sm',
               md: 'md',
               lg: '2xl'
-            }}>Watch anywhere. Cancel anytime.</Text>
-            <Text fontSize={{
-              base: 'sm',
-              md: 'md',
-              lg: '2xl'
-            }}>Ready to watch?</Text>
-            <Button className='btn'>Connect Wallet</Button>
+            }}>Whether you’re looking for live music, art exhibits, food festivals, or sporting events, we’ve got you covered with our easy to use platform. You ca browse events by date, category, and location, and even purchase tickets right from our website.
+              So why wait? Join us and start exploring today!</Text>
+            <Button className='btn mt-8'>Connect Wallet</Button>
           </Box>
         </Center>
       </Box>
