@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .bgHeader {
+    background: #035581 url('../../public/bgImg.jpg') no-repeat center center/cover;
+    background-blend-mode: multiply;
+  }
+  .btn {
+    @apply bg-rose-600 text-zinc-50 hover:bg-rose-700 transition-all duration-150 ease-in-out;
+  }
+}

@@ -1,9 +1,10 @@
-import classNames from 'classnames'
+import GridLayout from '@/components/GridLayout'
+import gridImg1 from '../../public/bgImg1.jpg'
 
 const HomePage = () => {
   return (
     <>
-      <h1 className={classNames(`grid place-items-center min-h-screen`)}>Coming Soon...</h1>
+      <GridLayout gridImg={gridImg1} gridOrder heading='New waves' title='Start watching' />
     </>
   )
 }
