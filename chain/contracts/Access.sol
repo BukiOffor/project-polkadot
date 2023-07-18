@@ -11,7 +11,7 @@ contract Access{
     address owner;
     AggregatorV3Interface priceFeed;
 
-    event Transfer()
+    //event Transfer()
 
     constructor(address priceFeedAddress) {
         priceFeed = AggregatorV3Interface(priceFeedAddress);
@@ -26,6 +26,6 @@ contract Access{
         if(!success){
             revert TransactionFailed();
         }
-        emit 
+        //emit Transfer()
     }
 }
