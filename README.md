@@ -1,6 +1,6 @@
 # project-Polkadot
 
-**Project Link**: 👉 [Project Polkadot](https://project-polkadot-zeta.vercel.app/)
+**Project Link**: 👉 [Project Polkadot](https://project-polkadot-snowy.vercel.app/)
 
 ## Name and summary of the project
 
