@@ -6,7 +6,8 @@ require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 
-const privateKey = process.env.goerli_pk
+const privateKey = process.env.moonbase_pk
+const MoonbeamDevPk = process.env.moonbase_node_pk
 const api_key = process.env.api_key
 const coinmarketcap = process.env.coinmarketcap
 
@@ -32,7 +33,7 @@ module.exports = {
     dev: {
       url: 'http://127.0.0.1:9944',
       chainId: 1281, // (hex: 0x501),
-      accounts: [privateKey]
+      accounts: [MoonbeamDevPk]
     },
     
   },
