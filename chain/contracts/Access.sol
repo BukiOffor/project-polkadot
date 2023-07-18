@@ -5,27 +5,36 @@ import "./PriceConverter.sol";
 error InsufficientAmount();
 error TransactionFailed();
 
-contract Access{
+contract Access {
     using PriceConverter for uint256;
 
     address owner;
     AggregatorV3Interface priceFeed;
 
-    //event Transfer()
+    event Transfer(
+        address indexed user,
+        string indexed product,
+        address indexed creator,
+        uint256 amount
+    );
 
     constructor(address priceFeedAddress) {
         priceFeed = AggregatorV3Interface(priceFeedAddress);
         owner = msg.sender;
     }
 
-    function pay(address _creator,uint256 _amount)external payable {
-        if(msg.value.getConversionRate(priceFeed) < _amount){
+    function pay(
+        string memory product,
+        address _creator,
+        uint256 _amount
+    ) external payable {
+        if (msg.value.getConversionRate(priceFeed) < _amount) {
             revert InsufficientAmount();
         }
-        (bool success,)=_creator.call{value:msg.value}("");
-        if(!success){
+        (bool success, ) = payable(_creator).call{value: msg.value}("");
+        if (!success) {
             revert TransactionFailed();
         }
-        //emit Transfer()
+        emit Transfer(msg.sender, product, _creator, _amount);
     }
 }
