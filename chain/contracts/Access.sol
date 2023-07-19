@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity 0.8.17;
 import "./PriceConverter.sol";
+import "hardhat/console.sol";
 
 error InsufficientAmount();
 error TransactionFailed();
@@ -8,7 +9,7 @@ error TransactionFailed();
 contract Access {
     using PriceConverter for uint256;
 
-    address owner;
+    address public owner;
     AggregatorV3Interface priceFeed;
 
     event Transfer(
@@ -28,7 +29,8 @@ contract Access {
         address _creator,
         uint256 _amount
     ) external payable {
-        if (msg.value.getConversionRate(priceFeed) < _amount) {
+        console.log(msg.value.getConversionRate(priceFeed));
+        if (msg.value.getConversionRate(priceFeed) < (_amount*1e18)) {
             revert InsufficientAmount();
         }
         (bool success, ) = payable(_creator).call{value: msg.value}("");

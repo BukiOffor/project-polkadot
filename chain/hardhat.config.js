@@ -19,17 +19,26 @@ module.exports = {
     ]
   },
   defaultNetwork: "hardhat",
-  networks : {
+    networks: {
+      hardhat: {
+        forking: {
+          url: 'https://rpc.api.moonbase.moonbeam.network', //moonbase alpha
+          blockNumber : 0x488a50,
+        }
+      },
+    // moonbeam mainnet
     moonbeam: {
       url: '',//TODO
-      chainId: 1287, // 0x507 in hex,
+      chainId: 1284, // 0x507 in hex,
       accounts: [privateKey]
-    },
+      },
+    //moonbase alpha test network
     moonbase: {
-      url: 'https://rpc.api.moonbase.moonbeam.network',
+      url: 'https://rpc.api.moonbase.moonbeam.network', //moonbase alpha
       chainId: 1287, // 0x507 in hex,
       accounts: [privateKey]
-    },
+      },
+    //local docker node
     dev: {
       url: 'http://127.0.0.1:9944',
       chainId: 1281, // (hex: 0x501),

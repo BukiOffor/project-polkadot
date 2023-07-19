@@ -9,7 +9,7 @@ const networkConfig = {
     },
     31337: {
         name: "hardhat",
-        price : "0x4497B606be93e773bbA5eaCFCb2ac5E2214220Eb",
+        price : "0x537879A0beA294c1ce04161Ae827919e92C23e92",
     },
     1281 : {
         name : "dev",
