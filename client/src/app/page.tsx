@@ -11,12 +11,13 @@ import gridImg1 from '../../public/create1.svg'
 import gridImg2 from '../../public/create2.svg'
 import gridImg3 from '../../public/create3.svg'
 import gridImg4 from '../../public/create4.svg'
-import { Box, Flex, Grid, Text, GridItem, Heading, VStack, SimpleGrid } from '@chakra-ui/react'
+import { Box, Flex, Grid, Text, GridItem, Heading, VStack } from '@chakra-ui/react'
 import CenterContent from '@/components/CenterContent'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import InputType from '@/components/Input'
+import AccordMenu from '@/components/AccordMenu'
 
 
 const HomePage = () => {
@@ -74,45 +75,78 @@ const HomePage = () => {
       <CenterContent>
         <Grid gridTemplateColumns={{
           base: '1fr',
-          md: ' 1fr',
-          lg: '1fr 1fr',
-        }} justifyItems={{
-          base: 'center',
-          lg: 'start'
-        }} gap={4}>
-          <GridItem>
-            <Heading as='h3'>Top creators just for you!</Heading>
+          md: ' repeat(4,1fr)',
+          lg: 'repeat(4,1fr)',
+          xl: 'repeat(4,1fr)'
+        }} gap={4} placeItems='center' alignItems='start' >
+          <GridItem colSpan={{
+            base: 1,
+            md: 2,
+            lg: 2,
+            xl: 2
+          }}>
+            <Heading fontSize={{
+              base: '2xl',
+              md: '3xl',
+              lg: '4xl',
+            }}
+              as='h3'>Top creators just for you!</Heading>
           </GridItem>
-          <GridItem>
+          <GridItem colSpan={{
+            base: 1,
+            md: 2,
+            lg: 2,
+            xl: 2
+          }}>
             <Text textAlign={{
               base: 'center',
+              md: 'left',
               lg: 'left'
 
+            }} fontSize={{
+              base: 'sm',
+              md: 'sm',
+              lg: 'md',
+              xl: 'md'
             }}>Hundreds of thousands of video creators, podcasters, writers, gamers, musicians, and more are achieving creative and financial freedom doing what they love on ArtVantage.</Text>
+          </GridItem>
+          <GridItem>
+            <Image src={gridImg1} alt='gridImg1' height={412} width={304} />
+          </GridItem>
+          <GridItem>
+            <Image src={gridImg2} alt='gridImg2' height={412} width={304} />
+          </GridItem>
+          <GridItem>
+            <Image src={gridImg3} alt='gridImg3' height={412} width={304} />
+          </GridItem>
+          <GridItem>
+            <Image src={gridImg4} alt='gridImg4' height={412} width={304} />
           </GridItem>
         </Grid>
       </CenterContent>
-      {/* <CenterContent>
-        <Grid gridAutoColumns={{
-          base: '1fr',
-          md: ' 1fr 1fr',
-          lg: '1fr 1fr 1fr 1fr',
-        }} >
-          <GridItem w='20rem' h='20rem' position='relative' >
-            <Image src={gridImg1} alt='gridImg1' fill priority />
-          </GridItem>
-          <GridItem w='20rem' h='20rem' position='relative' >
-            <Image src={gridImg2} alt='gridImg2' fill priority />
-          </GridItem>
-          <GridItem w='20rem' h='20rem' position='relative' >
-            <Image src={gridImg3} alt='gridImg3' fill priority />
-          </GridItem>
-          <GridItem w='20rem' h='20rem' position='relative' >
-            <Image src={gridImg4} alt='gridImg4' fill priority />
-          </GridItem>
-        </Grid>
-      </CenterContent> */}
 
+      <Box className=' bg-black text-white'>
+        <CenterContent>
+          <Heading py={8} pb={16} as='h3'>FAQs</Heading>
+          <AccordMenu heading='How can I get started as a creator on ArtVantage?' content='You are just a few steps to achieving that' />
+          <AccordMenu heading='How do I monetize my content on ArtVantage?' content='You are just a few steps to achieving that' />
+          <AccordMenu heading='Is my content protected on ArtVantage' content='You are just a few steps to achieving that' />
+          <AccordMenu heading='How can I connect with fans and build a community on ArtVantage?' content='You are just a few steps to achieving that' />
+          <AccordMenu heading='Can I discover content that matches my interests on ArtVantage?' content='You are just a few steps to achieving that' />
+          <Heading py={4} fontSize={{
+            base: 'md',
+            md: 'lg',
+            lg: 'xl',
+            xl: '2xl'
+          }}>
+            Still have a question?
+          </Heading>
+          <ButtonType bgColor='bg-white' border='purple' label='Contact Us' color='purple' />
+        </CenterContent>
+      </Box>
+      <Headings className=' py-20' title='Power up your creativity' description='Power up Your Imagination and Ignite Inspiration' >
+        <ButtonType className='mx-auto' label='Become a Creator' bgColor='bg-purple-700' bgModified='purple.500' color='white' />
+      </Headings>
     </>
   )
 }
