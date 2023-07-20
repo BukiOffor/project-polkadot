@@ -8,6 +8,7 @@ import {
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import Logo from './Logo'
 import Link from 'next/link'
+import ButtonType from './Button'
 const Navbar = () => {
   return (
     <>
@@ -18,7 +19,8 @@ const Navbar = () => {
             <Link href='/about'>
               About
             </Link>
-            <Menu>
+            <ButtonType bgColor='bg-purple-700' label='Connect Wallet' border='purple' color='white' bgModified='purple.500' />
+            {/* <Menu>
               <MenuButton>
                 Discover <ChevronDownIcon />
               </MenuButton>
@@ -29,7 +31,7 @@ const Navbar = () => {
                 <MenuItem>Delete</MenuItem>
                 <MenuItem>Attend a Workshop</MenuItem>
               </MenuList>
-            </Menu>
+            </Menu> */}
           </Flex>
         </Flex>
       </Box>

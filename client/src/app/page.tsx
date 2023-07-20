@@ -7,11 +7,16 @@ import img2 from '../../public/img2.svg'
 import img3 from '../../public/img3.svg'
 import img4 from '../../public/img4.svg'
 import img5 from '../../public/img5.svg'
-import { Box, Flex, Grid, GridItem, VStack } from '@chakra-ui/react'
+import gridImg1 from '../../public/create1.svg'
+import gridImg2 from '../../public/create2.svg'
+import gridImg3 from '../../public/create3.svg'
+import gridImg4 from '../../public/create4.svg'
+import { Box, Flex, Grid, Text, GridItem, Heading, VStack, SimpleGrid } from '@chakra-ui/react'
 import CenterContent from '@/components/CenterContent'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import InputType from '@/components/Input'
 
 
 const HomePage = () => {
@@ -58,6 +63,55 @@ const HomePage = () => {
           </Flex>
         </Box>
       </CenterContent>
+
+      <Headings className=' bg-[#00A856] text-white py-10' title='Search for your favorite creators' description='Start searching by entering their names, content, genre, etc.' border >
+        <Flex className=' items-center gap-2 flex-wrap lg:flex-nowrap'>
+          <InputType nameType='name' type='search' id='search' placeholder='Search your Favorite content' />
+          <ButtonType className='mx-auto w-full lg:w-max' label='Search' border='white' color='white' bgColor='bg-[#00A856]' bgModified='green.500' />
+        </Flex>
+      </Headings>
+
+      <CenterContent>
+        <Grid gridTemplateColumns={{
+          base: '1fr',
+          md: ' 1fr',
+          lg: '1fr 1fr',
+        }} justifyItems={{
+          base: 'center',
+          lg: 'start'
+        }} gap={4}>
+          <GridItem>
+            <Heading as='h3'>Top creators just for you!</Heading>
+          </GridItem>
+          <GridItem>
+            <Text textAlign={{
+              base: 'center',
+              lg: 'left'
+
+            }}>Hundreds of thousands of video creators, podcasters, writers, gamers, musicians, and more are achieving creative and financial freedom doing what they love on ArtVantage.</Text>
+          </GridItem>
+        </Grid>
+      </CenterContent>
+      {/* <CenterContent>
+        <Grid gridAutoColumns={{
+          base: '1fr',
+          md: ' 1fr 1fr',
+          lg: '1fr 1fr 1fr 1fr',
+        }} >
+          <GridItem w='20rem' h='20rem' position='relative' >
+            <Image src={gridImg1} alt='gridImg1' fill priority />
+          </GridItem>
+          <GridItem w='20rem' h='20rem' position='relative' >
+            <Image src={gridImg2} alt='gridImg2' fill priority />
+          </GridItem>
+          <GridItem w='20rem' h='20rem' position='relative' >
+            <Image src={gridImg3} alt='gridImg3' fill priority />
+          </GridItem>
+          <GridItem w='20rem' h='20rem' position='relative' >
+            <Image src={gridImg4} alt='gridImg4' fill priority />
+          </GridItem>
+        </Grid>
+      </CenterContent> */}
 
     </>
   )

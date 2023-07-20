@@ -15,7 +15,10 @@ interface ButtonTypeProps {
 
 const ButtonType = ({ onClick, border, bgColor, label, bgModified, color, className }: ButtonTypeProps) => {
   return (
-    <Button border={`1px solid ${border}`} color={color} _focus={{
+    <Button size={{
+      base: 'sm',
+      md: 'md'
+    }} border={`1px solid ${border}`} color={color} _focus={{
       bg: bgModified
     }} _hover={{
       bg: bgModified
