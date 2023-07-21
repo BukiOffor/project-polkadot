@@ -9,7 +9,21 @@ import { ChevronDownIcon } from '@chakra-ui/icons'
 import Logo from './Logo'
 import Link from 'next/link'
 import ButtonType from './Button'
+import { ethers } from "ethers"
+import { InjectedWallet,MetaMaskWallet } from "@thirdweb-dev/wallets";
+
+
 const Navbar = () => {
+
+  async function connectWallet(){
+    const provider = new ethers.providers.Web3Provider(window.ethereum, "any"); 
+    const wallet = new InjectedWallet(); 
+    wallet.connect();
+    const signer = provider.getSigner()
+    // address to update to 
+    const address = await signer.getAddress()
+}
+
   return (
     <>
       <Box as='header' className=' bg-black text-white fixed z-10 w-full px-2 md:px-4 xl:px-8 py-4 drop-shadow-xl border-b border-b-white'>
@@ -19,7 +33,10 @@ const Navbar = () => {
             <Link href='/about'>
               About
             </Link>
-            <ButtonType bgColor='bg-purple-700' label='Connect Wallet' border='purple' color='white' bgModified='purple.500' />
+            <ButtonType bgColor='bg-purple-700' label='Connect Wallet' border='purple' color='white' bgModified='purple.500' onClick={async () => {
+              console.log("clicked")
+              await connectWallet()
+            }} />
             {/* <Menu>
               <MenuButton>
                 Discover <ChevronDownIcon />
