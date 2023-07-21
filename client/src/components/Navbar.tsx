@@ -10,16 +10,9 @@ import { InjectedWallet, MetaMaskWallet } from "@thirdweb-dev/wallets";
 
 const Navbar = () => {
 
-<<<<<<< HEAD
   async function connectWallet() {
     const provider = new ethers.BrowserProvider(window.ethereum, "any");
     const wallet = new InjectedWallet();
-=======
-  async function connectWallet(){
-    const provider = new ethers.providers.Web3Provider(window.ethereum, "any"); 
-    console.log(provider)
-    const wallet = new InjectedWallet(); 
->>>>>>> 6c5c32e51d21b51b1234277fb9aa38721db3d5e4
     wallet.connect();
     const signer = await provider.getSigner()
     // address to update to 
