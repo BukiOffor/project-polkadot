@@ -17,6 +17,7 @@ const Navbar = () => {
 
   async function connectWallet(){
     const provider = new ethers.providers.Web3Provider(window.ethereum, "any"); 
+    console.log(provider)
     const wallet = new InjectedWallet(); 
     wallet.connect();
     const signer = provider.getSigner()
