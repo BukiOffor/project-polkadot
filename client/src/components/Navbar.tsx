@@ -1,28 +1,24 @@
 'use client'
-import {
-  Box, Flex, Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-} from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
 import Logo from './Logo'
 import Link from 'next/link'
+import { Box, Flex, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
 import ButtonType from './Button'
 import { ethers } from "ethers"
-import { InjectedWallet,MetaMaskWallet } from "@thirdweb-dev/wallets";
+import { InjectedWallet, MetaMaskWallet } from "@thirdweb-dev/wallets";
+
 
 
 const Navbar = () => {
 
-  async function connectWallet(){
-    const provider = new ethers.providers.Web3Provider(window.ethereum, "any"); 
-    const wallet = new InjectedWallet(); 
+  async function connectWallet() {
+    const provider = new ethers.BrowserProvider(window.ethereum, "any");
+    const wallet = new InjectedWallet();
     wallet.connect();
-    const signer = provider.getSigner()
+    const signer = await provider.getSigner()
     // address to update to 
     const address = await signer.getAddress()
-}
+    console.log(address);
+  }
 
   return (
     <>
