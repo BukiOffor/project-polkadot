@@ -1,5 +1,7 @@
-package com.example.demo.entity;
+package com.artvantage.DTO;
 
+
+import com.artvantage.enums.ContentType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,10 +11,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Data
-public class Content {
+public class ContentDTO {
     private String contentId;
-    private String materialType;
+    private ContentType contentType;
     private String content;
     private int price;
     private String filePath;
+    private String contentDescription;
+    private String contentCreator;
 }

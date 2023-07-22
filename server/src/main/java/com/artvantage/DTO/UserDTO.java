@@ -1,20 +1,18 @@
-package com.example.demo.entity;
+package com.artvantage.DTO;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 @Data
-public class User {
-    private long userId;
-    private String username;
-    private String email;
-    private String password;
+public class UserDTO {
     private String walletAddress;
-
-
+    private String profilePicture;
+    private String bio;
+    private String SocialMediaLinks;
 }
