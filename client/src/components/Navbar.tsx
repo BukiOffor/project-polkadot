@@ -25,7 +25,6 @@ const Navbar = () => {
               <ButtonType bgColor='bg-purple-700' label='Connect Wallet' border='purple' color='white' bgModified='purple.500' onClick={async () => {
                 console.log("clicked")
                 open()
-
               }} />
               {/* <Menu>
               <MenuButton>
