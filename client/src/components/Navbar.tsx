@@ -3,25 +3,35 @@ import Logo from './Logo'
 import Link from 'next/link'
 import { Box, Flex, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
 import ButtonType from './Button'
-import { ethers } from "ethers"
-import { InjectedWallet, MetaMaskWallet } from "@thirdweb-dev/wallets";
+import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
+import { Web3Modal, useWeb3Modal } from '@web3modal/react'
+import { configureChains, createConfig, WagmiConfig } from 'wagmi'
+import { arbitrum, mainnet, polygon } from 'wagmi/chains'
 
+const chains = [arbitrum, mainnet, polygon]
+const projectId = "34043931dedf67433e6f95bfa3205586"
 
+const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  connectors: w3mConnectors({ projectId, chains }),
+  publicClient
+})
+const ethereumClient = new EthereumClient(wagmiConfig, chains)
 
 const Navbar = () => {
 
+  const { open, close } = useWeb3Modal()
+
   async function connectWallet() {
-    const provider = new ethers.BrowserProvider(window.ethereum, "any");
-    const wallet = new InjectedWallet();
-    wallet.connect();
-    const signer = await provider.getSigner()
-    // address to update to 
-    const address = await signer.getAddress()
-    console.log(address);
+  
+       // <Web3Button/>
   }
 
   return (
     <>
+    <WagmiConfig config={wagmiConfig}>
+
       <Box as='header' className=' bg-black text-white fixed z-10 w-full px-2 md:px-4 xl:px-8 py-4 drop-shadow-xl border-b border-b-white'>
         <Flex className=' items-center justify-between text-md md:text-lg'>
           <Logo />
@@ -31,7 +41,7 @@ const Navbar = () => {
             </Link>
             <ButtonType bgColor='bg-purple-700' label='Connect Wallet' border='purple' color='white' bgModified='purple.500' onClick={async () => {
               console.log("clicked")
-              await connectWallet()
+              open()
             }} />
             {/* <Menu>
               <MenuButton>
@@ -47,7 +57,11 @@ const Navbar = () => {
             </Menu> */}
           </Flex>
         </Flex>
-      </Box>
+        </Box>
+      </WagmiConfig>
+
+      <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+
     </>
   )
 }
