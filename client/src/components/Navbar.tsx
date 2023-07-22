@@ -1,24 +1,15 @@
 'use client'
 import Logo from './Logo'
 import Link from 'next/link'
-import { Box, Flex, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
+import { Box, Flex, Button, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
 import ButtonType from './Button'
-import { ethers } from "ethers"
-import { InjectedWallet, MetaMaskWallet } from "@thirdweb-dev/wallets";
+import { connectWallet } from '@/utils/connect'
+
 
 
 
 const Navbar = () => {
 
-  async function connectWallet() {
-    const provider = new ethers.BrowserProvider(window.ethereum, "any");
-    const wallet = new InjectedWallet();
-    wallet.connect();
-    const signer = await provider.getSigner()
-    // address to update to 
-    const address = await signer.getAddress()
-    console.log(address);
-  }
 
   return (
     <>
@@ -26,6 +17,7 @@ const Navbar = () => {
         <Flex className=' items-center justify-between text-md md:text-lg'>
           <Logo />
           <Flex gap={8} alignItems='center'>
+            <Button colorScheme='blue'>Add More</Button>
             <Link href='/about'>
               About
             </Link>
