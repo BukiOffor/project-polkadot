@@ -1,9 +1,12 @@
 'use client'
 import Logo from './Logo'
 import Link from 'next/link'
-import { Box, Flex, Button, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
+import { Box, Flex, Button } from '@chakra-ui/react'
 import ButtonType from './Button'
-import { connectWallet } from '@/utils/connect'
+import { EthereumClient } from '@web3modal/ethereum'
+import { Web3Modal } from '@web3modal/react'
+import { WagmiConfig, mainnet } from 'wagmi'
+import { arbitrum, polygon } from 'viem/dist/types/chains'
 
 
 const chains = [arbitrum, mainnet, polygon]
@@ -22,6 +25,7 @@ const Navbar = () => {
 
   return (
     <>
+      {/* @ts-ignore */}
       <WagmiConfig config={wagmiConfig}>
 
         <Box as='header' className=' bg-black text-white fixed z-10 w-full px-2 md:px-4 xl:px-8 py-4 drop-shadow-xl border-b border-b-white'>
@@ -60,3 +64,22 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+function configureChains(chains: any[], arg1: any[]): { publicClient: any } {
+  throw new Error('Function not implemented.')
+}
+
+
+function w3mProvider(arg0: { projectId: string }) {
+  throw new Error('Function not implemented.')
+}
+
+
+function createConfig(arg0: { autoConnect: boolean; connectors: any; publicClient: any }) {
+  throw new Error('Function not implemented.')
+}
+
+
+function w3mConnectors(arg0: { projectId: string; chains: any[] }) {
+  throw new Error('Function not implemented.')
+}
