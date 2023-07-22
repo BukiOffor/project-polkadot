@@ -40,18 +40,6 @@ const Navbar = () => {
                 console.log("clicked")
                 open()
               }} />
-              {/* <Menu>
-              <MenuButton>
-                Discover <ChevronDownIcon />
-              </MenuButton>
-              <MenuList className='text-white bg-black'>
-                <MenuItem>Download</MenuItem>
-                <MenuItem>Create a Copy</MenuItem>
-                <MenuItem>Mark as Draft</MenuItem>
-                <MenuItem>Delete</MenuItem>
-                <MenuItem>Attend a Workshop</MenuItem>
-              </MenuList>
-            </Menu> */}
             </Flex>
           </Flex>
         </Box>
@@ -64,22 +52,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-function configureChains(chains: any[], arg1: any[]): { publicClient: any } {
-  throw new Error('Function not implemented.')
-}
-
-
-function w3mProvider(arg0: { projectId: string }) {
-  throw new Error('Function not implemented.')
-}
-
-
-function createConfig(arg0: { autoConnect: boolean; connectors: any; publicClient: any }) {
-  throw new Error('Function not implemented.')
-}
-
-
-function w3mConnectors(arg0: { projectId: string; chains: any[] }) {
-  throw new Error('Function not implemented.')
-}
