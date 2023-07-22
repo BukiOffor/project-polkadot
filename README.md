@@ -17,8 +17,8 @@ A decentralized content streaming platform that allows users to stream content f
 |  1   | Chukwuemeka Nnanna Echi | <https://github.com/CEN-Smart>  | <nnanna.echi018@uniport.edu.ng> |  FrontEnd Developer  |
 |  2   |       Ebuka Offor       | <https://github.com/BukiOffor>  |     <buki.offor@gmail.com>      | Blockchain Developer |
 |  3   | Chikodinaka Ann Anyanwu | <https://github.com/Chikodiann> |     <chikodiann@gmail.com>      |  BackEnd Developer   |
-|  4   | Chukwuemeka Nnanna Echi |            @emekaeu             |           @BukiOffor            |  BackEnd Developer   |
-|  5   | Chukwuemeka Nnanna Echi |            @emekaeu             |           @BukiOffor            |  BackEnd Developer   |
+|  4   |Okoye Christabel Ifunanya| <https://github.com/Stabelcode> | <Stabelokoye500@outlook.com>    |  Software Tester     |
+|  5   | David Adurotimi         |                                 |                                 |  UI/UX Designer      |
 
 ---
 
