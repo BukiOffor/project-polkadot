@@ -18,7 +18,7 @@ A decentralized content streaming platform that allows users to stream content f
 |  2   |       Ebuka Offor       | <https://github.com/BukiOffor>  |     <buki.offor@gmail.com>      | Blockchain Developer |
 |  3   | Chikodinaka Ann Anyanwu | <https://github.com/Chikodiann> |     <chikodiann@gmail.com>      |  BackEnd Developer   |
 |  4   |Okoye Christabel Ifunanya| <https://github.com/Stabelcode> | <Stabelokoye500@outlook.com>    |  Software Tester     |
-|  5   | David Adurotimi         |                                 |                                 |  UI/UX Designer      |
+|  5   | David Adurotimi         | <https://github.com/Adurotimi>  |     <Oluwadavid55@gmail.com>    |  UI/UX Designer      |
 
 ---
 
