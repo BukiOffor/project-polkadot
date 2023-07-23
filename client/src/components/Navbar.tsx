@@ -17,6 +17,9 @@ const Navbar = () => {
         <Flex className=' items-center justify-between text-md md:text-lg'>
           <Logo />
           <Flex gap={8} alignItems='center'>
+            <Link href='/profile'>
+              Profile
+            </Link>
             <Link href='/about'>
               About
             </Link>
