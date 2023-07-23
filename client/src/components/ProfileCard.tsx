@@ -23,7 +23,7 @@ const ProfileCard = ({ image, title, description, wallet, walletAddress }: Profi
         <CardFooter>
           <Flex flexDir='column' w='full' gap={4}>
             <Text as='strong'>{title}</Text>
-            <Flex className=' items-center justify-between' >
+            <Flex className=' items-center justify-between flex-wrap' >
               <Text>{wallet}</Text>
               <Text textAlign='end' as='strong'>{walletAddress}</Text>
             </Flex>
