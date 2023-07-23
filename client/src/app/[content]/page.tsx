@@ -1,4 +1,3 @@
-import ButtonType from '@/components/Button';
 import Headings from '@/components/Headings';
 
 const ContentPage = () => {
