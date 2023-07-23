@@ -24,9 +24,7 @@ const ProfileContainer = () => {
       alert("Please connect to Moonbean Alpha network")
     }
     else {
-      await walletClient?.writeContract({
-        
-      })
+      //await walletClient?.writeContract({})
       console.log(account.isConnected)
       console.log(chain?.name)
       console.log(walletClient)

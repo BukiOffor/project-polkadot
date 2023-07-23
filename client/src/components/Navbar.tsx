@@ -4,11 +4,12 @@ import Link from 'next/link'
 import { Box, Flex } from '@chakra-ui/react'
 import ButtonType from './Button'
 import { useWeb3Modal } from '@web3modal/react'
+import { getAccount,getNetwork,getWalletClient } from '@wagmi/core'
 
 
 const Navbar = () => {
   const { open, close } = useWeb3Modal()
-
+  const account = getAccount() 
 
   return (
     <>
@@ -17,9 +18,9 @@ const Navbar = () => {
         <Flex className=' items-center justify-between text-md md:text-lg'>
           <Logo />
           <Flex gap={8} alignItems='center'>
-            <Link href='/profile'>
+            {account.isConnected && (<Link href='/profile'>
               Profile
-            </Link>
+            </Link>)}
             <Link href='/about'>
               About
             </Link>
