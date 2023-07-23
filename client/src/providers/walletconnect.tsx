@@ -6,7 +6,7 @@ import { arbitrum, mainnet, polygon, moonbeam, moonbaseAlpha } from 'wagmi/chain
 
 const chains = [arbitrum, mainnet, polygon, moonbeam, moonbaseAlpha]
 
-const projectId = process.env.API_KEY as string
+const projectId = '34043931dedf67433e6f95bfa3205586'//process.env.API_KEY as string
 
 const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])
 const wagmiConfig = createConfig({
