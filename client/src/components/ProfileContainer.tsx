@@ -3,18 +3,22 @@
 import { Flex, Grid, GridItem, Input, Text } from '@chakra-ui/react'
 import ButtonType from './Button'
 import Headings from './Headings'
+import Link from 'next/link'
 
 const ProfileContainer = () => {
   return (
     <>
       {/* Side Navbar */}
       <Grid minH='100vh' gridTemplateColumns='repeat(12,1fr)'>
-        <GridItem className=' bg-slate-200 pt-28 flex justify-between gap-6 items-center md:flex-col md:px-10 pb-10 md:justify-start text-center px-4' colSpan={{
+        <GridItem className=' bg-slate-200 pt-0 pb-0 md:pt-28 flex justify-between gap-6 items-center md:flex-col md:px-10 md:pb-10 md:justify-start text-center px-4' colSpan={{
           base: 12,
           md: 4,
           xl: 3,
         }}>
-          <Text as='strong'>My profile</Text>
+          <ButtonType label='My Profile' color='white' bgColor='bg-blue-500' bgModified='blue.500' />
+          <Link className=' font-semibold' href='/market'>
+            Market Place
+          </Link>
           <ButtonType label='Upload a new content' color='purple' bgColor='bg-transparent' border='purple' />
         </GridItem>
         {/* Main Content */}
