@@ -4,7 +4,7 @@ import { Web3Modal } from '@web3modal/react'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
 import { arbitrum, mainnet, polygon, moonbeam, moonbaseAlpha } from 'wagmi/chains'
 
-const chains = [arbitrum, mainnet, polygon]
+const chains = [arbitrum, mainnet, polygon, moonbeam, moonbaseAlpha]
 
 const projectId = process.env.API_KEY as string
 
