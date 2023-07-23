@@ -4,8 +4,20 @@ import { Flex, Grid, GridItem, Input, Text } from '@chakra-ui/react'
 import ButtonType from './Button'
 import Headings from './Headings'
 import Link from 'next/link'
+import { getAccount } from '@wagmi/core'
+
 
 const ProfileContainer = () => {
+  
+  async function upload() {
+    const account = getAccount()
+    if (!account.isConnected) {
+      alert("Please connect your wallet")
+    } else {
+      console.log(account.isConnected)
+    }
+  }
+
   return (
     <>
       {/* Side Navbar */}
@@ -28,7 +40,10 @@ const ProfileContainer = () => {
           xl: 9,
         }} >
           <Flex justifyContent='flex-end' className='px-4'>
-            <ButtonType className=' ' label='Publish' color='white' bgColor='bg-blue-500' bgModified='blue.500' />
+            <ButtonType className=' ' label='Publish' color='white' bgColor='bg-blue-500' bgModified='blue.500' onClick={async () => {
+              console.log("clicked")
+              upload()
+            }} />
           </Flex>
           <Headings>
             <Flex flexWrap='wrap'>
