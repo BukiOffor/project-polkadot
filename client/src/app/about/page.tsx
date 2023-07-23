@@ -1,9 +1,12 @@
 'use client'
 
+import Headings from '@/components/Headings'
+
 const AboutPage = () => {
   return (
     <>
-    <h1>This is the About Page</h1>
+      <Headings title='This is the About Us Page...' className='bg-black text-white pb-10 pt-[10rem] min-h-[60vh]'>
+      </Headings>
     </>
   )
 }
