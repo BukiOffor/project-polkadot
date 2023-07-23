@@ -111,7 +111,7 @@ const HomePage = () => {
             }}>Hundreds of thousands of video creators, podcasters, writers, gamers, musicians, and more are achieving creative and financial freedom doing what they love on ArtVantage.</Text>
           </GridItem>
           <GridItem>
-            <Link href={`/profile/content`}>
+            <Link href={`/content`}>
               <Card >
                 <CardBody>
                   <Image className=' rounded-md' src={gridImg1} alt='gridImg1' height={412} width={304} />
@@ -121,7 +121,7 @@ const HomePage = () => {
 
           </GridItem>
           <GridItem>
-            <Link href={`/profile/content`}>
+            <Link href={`/content`}>
               <Card>
                 <CardBody>
                   <Image src={gridImg2} alt='gridImg1' height={412} width={304} />
@@ -130,7 +130,7 @@ const HomePage = () => {
             </Link>
           </GridItem>
           <GridItem>
-            <Link href={`/profile/content`}>
+            <Link href={`/content`}>
               <Card>
                 <CardBody>
                   <Image src={gridImg3} alt='gridImg1' height={412} width={304} />
@@ -139,7 +139,7 @@ const HomePage = () => {
             </Link>
           </GridItem>
           <GridItem>
-            <Link href={`/profile/content`}>
+            <Link href={`/content`}>
               <Card>
                 <CardBody>
                   <Image src={gridImg4} alt='gridImg1' height={412} width={304} />
