@@ -22,7 +22,7 @@ const ProfileContainer = () => {
     <>
       {/* Side Navbar */}
       <Grid minH='100vh' gridTemplateColumns='repeat(12,1fr)'>
-        <GridItem className=' bg-slate-200 pt-0 pb-0 md:pt-28 flex justify-between gap-6 items-center md:flex-col md:px-10 md:pb-10 md:justify-start text-center px-4' colSpan={{
+        <GridItem className=' bg-slate-200 pt-28 pb-0 flex flex-col justify-start gap-6 items-center md:px-10 md:pb-10 text-center px-4' colSpan={{
           base: 12,
           md: 4,
           xl: 3,
