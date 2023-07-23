@@ -5,6 +5,7 @@ import Link from 'next/link';
 import ButtonType from './Button';
 import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
+import { getAccount,getNetwork,getWalletClient } from '@wagmi/core'
 
 const navItems = [
   { name: 'My Profile', href: '/profile' },
@@ -13,10 +14,12 @@ const navItems = [
 
 const ProfileNavbar = () => {
   const pathname = usePathname()
+  const account = getAccount() 
+
   return (
     <Box className='pt-[6rem] pb-6 drop-shadow-2xl text-center'>
       <Flex flexDir='column' gap={4}>
-        {navItems.map((item, i) => (
+        {account.isConnected&& navItems.map((item, i) => (
           <Link key={i} className={classNames(`py-6  hover:bg-purple-700`, {
             'bg-purple-700 text-white font-semibold': pathname === item.href
           })} href={item.href}>
