@@ -19,11 +19,11 @@ const ProfileNavbar = () => {
   return (
     <Box className='pt-[6rem] pb-6 drop-shadow-2xl text-center'>
       <Flex flexDir='column' gap={4}>
-        <Link className={classNames(`py-6 transition-all duration-150  hover:bg-purple-600`, {
+        {account.isConnected && <Link className={classNames(`py-6 transition-all duration-150  hover:bg-purple-600`, {
           'bg-purple-700 text-white font-semibold': pathname === '/profile'
         })} href='/profile'>
           My Profile
-        </Link>
+        </Link>}
         <Link className={classNames(`py-6 transition-all duration-150  hover:bg-purple-600`, {
           'bg-purple-700 text-white font-semibold': pathname === '/profile/market'
         })} href='/profile/market'>

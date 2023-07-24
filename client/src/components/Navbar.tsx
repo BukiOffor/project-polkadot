@@ -30,9 +30,9 @@ const Navbar = () => {
               </MenuButton>
               <MenuList className=' text-gray-600'>
                 <MenuItem>
-                  <Link href='/profile'>
+                  {account.isConnected && <Link href='/profile'>
                     Profile
-                  </Link>
+                  </Link>}
                 </MenuItem>
                 <MenuItem>
                   <Link href='/about'>
