@@ -6,10 +6,6 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
 } from '@chakra-ui/react'
 import ButtonType from './Button'
 import { useWeb3Modal } from '@web3modal/react'
