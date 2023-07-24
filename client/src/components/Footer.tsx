@@ -18,7 +18,9 @@ const Footer = () => {
         }} className=' mx-auto border-b pb-28 border-white justify-between w-[90%] md:w-[85%] lg:w-[80%]'>
           <VStack spacing={4} alignItems='flex-start'>
             <Logo />
-            <FooterItem title='Join our newsletter to stay up to date on features and releases' />
+            <Text>
+              Join our newsletter to stay up to date on features and releases
+            </Text>
             <Flex className='items-center flex-wrap xl:flex-nowrap gap-2'>
               <InputType type='email' id='email' nameType='name' placeholder='Enter your email' />
               <ButtonType className='w-full md:w-fit px-12' bgColor='bg-black' label='Subscribe' border='white' color='white' bgModified='gray.700' />

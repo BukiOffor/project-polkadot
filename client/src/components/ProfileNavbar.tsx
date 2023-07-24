@@ -23,8 +23,10 @@ const ProfileNavbar = () => {
             {item.name}
           </Link>
         ))}
-        <Link className='' href='/profile/uploadcontent'>
-          <ButtonType label='Upload a new content' bgColor='transparent' color='purple' border='purple' />
+        <Link href='/profile/uploadcontent'>
+          <ButtonType className={classNames(` `, {
+            'bg-purple-700 text-white font-semibold': pathname === '/profile/uploadcontent'
+          })} label='Upload a new content' bgColor='transparent' color='purple' border='purple' />
         </Link>
       </Flex>
     </Box>
