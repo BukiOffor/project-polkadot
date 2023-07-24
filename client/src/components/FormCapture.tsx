@@ -39,7 +39,7 @@ const FormCapture = () => {
                 <FormControl>
                   <InputGroup>
                     <InputLeftElement pointerEvents='none'>
-                      <BiDollar size={24} className=' bg-emerald-400 text-white' />
+                      <BiDollar size={24} className=' bg-purple-700 text-white' />
                     </InputLeftElement>
                     <Input
                       variant='filled' type='number' placeholder='Pricing' />
