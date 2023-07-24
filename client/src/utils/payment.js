@@ -8,9 +8,10 @@ import { ethers } from "ethers";
 
 
 export const Gateway = (address, amount) => {
-    const { chain, chains } = getNetwork()
+  const { chain, chains } = getNetwork()
+  const chainId = chain?.id
     const { config } = usePrepareContractWrite({
-        address: contractAddresses[getChainId][0],
+        address: contractAddresses[getChainId][0], //chain?.id
         abi: abi,
         functionName: 'pay',
     })

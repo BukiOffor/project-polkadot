@@ -14,11 +14,12 @@ import {
 import ButtonType from './Button'
 import { useWeb3Modal } from '@web3modal/react'
 import { BiMenu } from 'react-icons/bi'
+import { getAccount } from '@wagmi/core'
 
 
 const Navbar = () => {
   const { open, close } = useWeb3Modal()
-
+  const account = getAccount()
 
   return (
     <>

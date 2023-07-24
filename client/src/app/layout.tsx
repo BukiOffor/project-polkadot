@@ -22,11 +22,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <WalletConnect />
+      <WalletConnect/>
         <Providers>
-          <Navbar />
-          {children}
-          <Footer />
+        <Navbar />
+        {children}
+        <Footer />
         </Providers>
       </body>
     </html>

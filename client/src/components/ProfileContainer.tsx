@@ -4,17 +4,31 @@ import { Flex, Grid, GridItem, Input, Text } from '@chakra-ui/react'
 import ButtonType from './Button'
 import Headings from './Headings'
 import Link from 'next/link'
-import { getAccount } from '@wagmi/core'
+import { getAccount,getNetwork,getWalletClient } from '@wagmi/core'
+
 
 
 const ProfileContainer = () => {
   
   async function upload() {
-    const account = getAccount()
+    const account = getAccount() 
+    const { chain, chains } = getNetwork()
+    const walletClient = await getWalletClient()
+
+    console.log(walletClient)
+
     if (!account.isConnected) {
-      alert("Please connect your wallet")
-    } else {
+      alert("Please Connect your Wallet")
+    }
+    else if (chain?.id !== 1287) {
+      alert("Please connect to Moonbean Alpha network")
+    }
+    else {
+      //await walletClient?.writeContract({})
       console.log(account.isConnected)
+      console.log(chain?.name)
+      console.log(walletClient)
+
     }
   }
 
