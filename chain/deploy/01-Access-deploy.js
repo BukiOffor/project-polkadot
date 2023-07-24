@@ -21,7 +21,7 @@ module.exports.default = async ({deployments}) => {
 
     if(!developmentChains.includes(network.name)) {
         log(`***********verifying ${access.address}**********`)
-        await verify(access.address,[])
+        await verify(access.address,[priceFeed])
     }
 }
 
