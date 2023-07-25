@@ -41,7 +41,7 @@ const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, 
     })        
     const { hash } = await writeContract(config)
     notification.show({
-      message: 'Wait for Transaction Result',
+      message: 'Wait while your transaction is being processed',
       title: 'Transacrion Status',
       variant: 'info'
     })   
