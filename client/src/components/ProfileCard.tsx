@@ -49,11 +49,12 @@ const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, 
               <Text textAlign='end' as='strong'>{walletAddress}</Text>
             </Flex>
             <Text>{description}</Text>
-            <Flex className=' items-center gap-1 text-purple-700 text-md cursor-pointer w-fit' onClick={async () => {
-              account.isConnected ?
-                await gateway()
-                : alert("Please Connect your Wallet")
-            }} >
+            <Flex className=' items-center gap-1 text-purple-700 text-md cursor-pointer w-fit'>
+              {/* onClick={async () => {
+                account.isConnected ?
+                  await gateway()
+                  : alert("Please Connect your Wallet")
+              }} */}
               <Text>{price}</Text>
               {Icon && <Icon size={24} />}
             </Flex>
