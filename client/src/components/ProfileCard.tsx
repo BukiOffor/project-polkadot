@@ -22,19 +22,19 @@ interface ProfileCardProps {
   icon?: IconType
   hover?: boolean
   onClick?: () => void
+  link?: boolean
 }
 
 
 
 
-const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, price, icon: Icon, hover, onClick }: ProfileCardProps) => {
+const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, price, icon: Icon, hover, onClick, link }: ProfileCardProps) => {
 
   return (
     <>
-      <Card onClick={onClick} _hover={{
+      <Card _hover={{
         bg: hover ? 'gray.50' : 'none',
         transform: hover ? 'translateY(-2px)' : 'none',
-        cursor: hover ? 'pointer' : 'default',
         transition: 'all .2s ease-in-out'
       }} mb={8} overflow='hidden'>
         <Box position='relative' h='16rem' >
@@ -43,18 +43,18 @@ const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, 
         <CardBody >
           <Flex pt={4} flexDir='column' w='full' gap={2}>
             {badge && <Badge className=' w-fit py-1 px-2'>{badge}</Badge>}
-            <Text as='strong'>{title}</Text>
+            <Text color={link ? 'blue.500' : ''} _hover={{
+              textDecoration: hover ? 'underline' : 'none',
+              cursor: hover ? 'pointer' : 'default',
+              transition: 'all .2s ease-in-out'
+            }} onClick={onClick}
+              as='strong'>{title}</Text>
             <Flex className=' items-center justify-between flex-wrap' >
               <Text>{wallet}</Text>
               <Text textAlign='end' as='strong'>{walletAddress}</Text>
             </Flex>
             <Text>{description}</Text>
             <Flex className=' items-center gap-1 text-purple-700 text-md cursor-pointer w-fit'>
-              {/* onClick={async () => {
-                account.isConnected ?
-                  await gateway()
-                  : alert("Please Connect your Wallet")
-              }} */}
               <Text>{price}</Text>
               {Icon && <Icon size={24} />}
             </Flex>

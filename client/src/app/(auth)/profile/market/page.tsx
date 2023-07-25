@@ -16,12 +16,12 @@ const MarketPage = () => {
       <Box>
         <Heading textAlign='center' mt={6} as='h4' size='md' mb={20}>Explore market place</Heading>
         <SimpleGrid minChildWidth='300px' spacing={10}>
-          <ProfileCard hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
-          <ProfileCard hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
-          <ProfileCard hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
-          <ProfileCard hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
-          <ProfileCard hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
-          <ProfileCard hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
+          <ProfileCard link hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
+          <ProfileCard link hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
+          <ProfileCard link hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
+          <ProfileCard link hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
+          <ProfileCard link hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
+          <ProfileCard link hover onClick={handleRoute} image={marketImg} badge='Article' price='$ 100' icon={BiChevronRight} title='Understanding React for beginners' description='Welcome to the world of unlimited streaming' />
         </SimpleGrid>
       </Box>
     </>
