@@ -6,11 +6,9 @@ import { IconType } from 'react-icons';
 import { getAccount, getWalletClient,getNetwork } from '@wagmi/core'
 import { prepareWriteContract, writeContract, waitForTransaction } from '@wagmi/core'
 import { contractAddresses, abi } from "../../constants"
-import{ethers} from "ethers"
-
-
-//import { gateway } from "../utils/payment"
-
+import { ethers } from "ethers"
+import { useNotification } from 'use-toast-notification'
+//import priceFeed from "../utils/price"
 
 interface ProfileCardProps {
   image: StaticImageData,
@@ -24,21 +22,22 @@ interface ProfileCardProps {
 }
 const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, price, icon: Icon }: ProfileCardProps) => {
   const account = getAccount()
-  
-  /*{ts-ignore}**/
+  const notification = useNotification()
 
   async function gateway() {
     
+
     const { chain, chains } = getNetwork()
     const walletClient = await getWalletClient()
     const provider = new ethers.providers.Web3Provider(window.ethereum)
+    //const price = await priceFeed()
     const config = await prepareWriteContract({
       //@ts-ignore
-      address: contractAddresses[chain?.id][0], 
+      address: '0x771ABC39aA6dDa99D3b3cBb8ea63B19b7472f68c', //contractAddresses[chain?.id][0] 
       abi: abi,
       functionName: 'pay',
-      args: [0, "0xf9808e0a01C513720e7878cF4Ca719ec53310fD8", '0'],
-      value: BigInt(100000),
+      args: [0, "0xf9808e0a01C513720e7878cF4Ca719ec53310fD8", BigInt(0.00000001 * 1e18)],
+      value: BigInt(ethers.utils.parseEther("0.00000001").toString()),
     })        
     const { hash } = await writeContract(config)
     const data =  await waitForTransaction({
@@ -48,8 +47,20 @@ const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, 
     if (data.status == 'success') {
       // CALL ANN'S API HERE
       console.log(data);
+      notification.show({
+        message: 'Your purchase was succesfull',
+        title: 'Delivery Status',
+        variant: 'success'
+      })   
+    } else {
+      notification.show({
+        message: 'Your purchase could not be processed', 
+        title: 'Delivery Status',
+        variant: 'error'
+    })
     }
   }
+  
 
   return (
     <>
@@ -76,7 +87,7 @@ const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, 
             </Flex>
           </Flex>
         </CardBody>
-      </Card>
+        </Card>
     </>
   )
 }

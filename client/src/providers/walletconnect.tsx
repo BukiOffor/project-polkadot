@@ -4,6 +4,7 @@ import { Web3Modal } from '@web3modal/react'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
 import { arbitrum, mainnet, polygon, moonbeam, moonbaseAlpha } from 'wagmi/chains'
 
+
 const chains = [arbitrum, mainnet, polygon, moonbeam, moonbaseAlpha]
 
 const projectId = '34043931dedf67433e6f95bfa3205586'//process.env.API_KEY as string
@@ -19,8 +20,11 @@ const ethereumClient = new EthereumClient(wagmiConfig, chains)
 export default function WalletConnect() {
   return (
     <>
+      
+
       <WagmiConfig config={wagmiConfig}>
-      </WagmiConfig>
+        </WagmiConfig>
+
 
       <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
     </>
