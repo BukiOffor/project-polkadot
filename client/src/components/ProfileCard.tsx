@@ -4,6 +4,12 @@ import { Badge, Box, Card, CardBody, Flex, Text } from '@chakra-ui/react';
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 import { IconType } from 'react-icons';
+import { getAccount, getWalletClient, getNetwork } from '@wagmi/core'
+import { prepareWriteContract, writeContract, waitForTransaction } from '@wagmi/core'
+import { contractAddresses, abi } from "../../constants"
+import { ethers } from "ethers"
+import { useNotification } from 'use-toast-notification'
+//import priceFeed from "../utils/price"
 
 interface ProfileCardProps {
   image: StaticImageData,
@@ -43,7 +49,11 @@ const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, 
               <Text textAlign='end' as='strong'>{walletAddress}</Text>
             </Flex>
             <Text>{description}</Text>
-            <Flex className=' items-center gap-1 text-purple-700 text-md cursor-pointer w-fit' >
+            <Flex className=' items-center gap-1 text-purple-700 text-md cursor-pointer w-fit' onClick={async () => {
+              account.isConnected ?
+                await gateway()
+                : alert("Please Connect your Wallet")
+            }} >
               <Text>{price}</Text>
               {Icon && <Icon size={24} />}
             </Flex>

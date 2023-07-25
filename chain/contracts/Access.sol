@@ -29,8 +29,11 @@ contract Access {
         address _creator,
         uint256 _amount
     ) external payable {
-        console.log(msg.value.getConversionRate(priceFeed));
-        if (msg.value.getConversionRate(priceFeed) < (_amount*1e18)) {
+        //console.log(msg.value.getConversionRate(priceFeed));
+        // if (msg.value.getConversionRate(priceFeed) < (_amount*1e18)) {
+        //     revert InsufficientAmount();
+        // }
+        if (msg.value < (_amount)) {
             revert InsufficientAmount();
         }
         (bool success, ) = payable(_creator).call{value: msg.value}("");
