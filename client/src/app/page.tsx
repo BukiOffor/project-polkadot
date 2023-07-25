@@ -18,14 +18,19 @@ import Link from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import InputType from '@/components/Input'
 import AccordMenu from '@/components/AccordMenu'
+import { useRouter } from 'next/navigation'
 
 
 const HomePage = () => {
+  const router = useRouter()
+  const handleRoute = () => {
+    router.push('/profile/uploadcontent')
+  }
   return (
     <>
       <Headings title='Empowering Creators and Revolutionizing Content Creation' description='Discover, Create, and Monetize Your Unique Content in a Secure Blockchain-Powered Viewing Platform' className='bg-black text-white pb-10 pt-[10rem] min-h-[60vh]'>
 
-        <ButtonType color='white' className='mx-auto' label='Become a Creator' bgColor='bg-purple-700' bgModified='purple.500' />
+        <ButtonType onClick={handleRoute} color='white' className='mx-auto' label='Become a Creator' bgColor='bg-purple-700' bgModified='purple.500' />
       </Headings>
 
       <Headings className=' pt-20 pb-5' title='How ArtVantage works' description='ArtVantage empowers creators with the essential tools to effortlessly connect with their fans, foster vibrant communities, and earn an income.' />
@@ -111,41 +116,37 @@ const HomePage = () => {
             }}>Hundreds of thousands of video creators, podcasters, writers, gamers, musicians, and more are achieving creative and financial freedom doing what they love on ArtVantage.</Text>
           </GridItem>
           <GridItem>
-            <Link href={`/content`}>
-              <Card >
-                <CardBody>
-                  <Image className=' rounded-md' src={gridImg1} alt='gridImg1' height={412} width={304} />
-                </CardBody>
-              </Card>
-            </Link>
+            <Card >
+              <CardBody>
+                <Image className=' rounded-md' src={gridImg1} alt='gridImg1' height={412} width={304} />
+              </CardBody>
+            </Card>
 
           </GridItem>
           <GridItem>
-            <Link href={`/content`}>
-              <Card>
-                <CardBody>
-                  <Image src={gridImg2} alt='gridImg1' height={412} width={304} />
-                </CardBody>
-              </Card>
-            </Link>
+            <Card>
+              <CardBody>
+                <Image src={gridImg2} alt='gridImg1' height={412} width={304} />
+              </CardBody>
+            </Card>
+
           </GridItem>
           <GridItem>
-            <Link href={`/content`}>
-              <Card>
-                <CardBody>
-                  <Image src={gridImg3} alt='gridImg1' height={412} width={304} />
-                </CardBody>
-              </Card>
-            </Link>
+            <Card>
+              <CardBody>
+                <Image src={gridImg3} alt='gridImg1' height={412} width={304} />
+              </CardBody>
+            </Card>
+
           </GridItem>
           <GridItem>
-            <Link href={`/content`}>
-              <Card>
-                <CardBody>
-                  <Image src={gridImg4} alt='gridImg1' height={412} width={304} />
-                </CardBody>
-              </Card>
-            </Link>
+
+            <Card>
+              <CardBody>
+                <Image src={gridImg4} alt='gridImg1' height={412} width={304} />
+              </CardBody>
+            </Card>
+
           </GridItem>
         </Grid>
       </CenterContent>
@@ -170,7 +171,7 @@ const HomePage = () => {
         </CenterContent>
       </Box>
       <Headings className=' py-20' title='Power up your creativity' description='Power up Your Imagination and Ignite Inspiration' >
-        <ButtonType className='mx-auto' label='Become a Creator' bgColor='bg-purple-700' bgModified='purple.500' color='white' />
+        <ButtonType onClick={handleRoute} className='mx-auto' label='Become a Creator' bgColor='bg-purple-700' bgModified='purple.500' color='white' />
       </Headings>
     </>
   )
