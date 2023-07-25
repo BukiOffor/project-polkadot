@@ -22,6 +22,7 @@ interface ProfileCardProps {
   icon?: IconType
   hover?: boolean
   onClick?: () => void
+  link?: boolean
 }
 
 
@@ -29,55 +30,11 @@ interface ProfileCardProps {
 
 const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, price, icon: Icon, hover, onClick }: ProfileCardProps) => {
 
-  const account = getAccount()
-  const notification = useNotification()
-
-  async function gateway() {
-    const { chain, chains } = getNetwork()
-    const walletClient = await getWalletClient()
-    const provider = new ethers.providers.Web3Provider(window.ethereum)
-    //const price = await priceFeed()
-    const config = await prepareWriteContract({
-      //@ts-ignore
-      address: '0x771ABC39aA6dDa99D3b3cBb8ea63B19b7472f68c', //contractAddresses[chain?.id][0] 
-      abi: abi,
-      functionName: 'pay',
-      args: [0, "0xf9808e0a01C513720e7878cF4Ca719ec53310fD8", BigInt(0.2 * 1e18)],
-      value: BigInt(ethers.utils.parseEther("0.2").toString()),
-    })        
-    const { hash } = await writeContract(config)
-    notification.show({
-      message: 'Wait while your transaction is being processed',
-      title: 'Transacrion Status',
-      variant: 'info'
-    })   
-    const data =  await waitForTransaction({
-      confirmations: 1,
-      hash,
-    })
-    if (data.status == 'success') {
-      // CALL ANN'S API HERE
-      console.log(data);
-      notification.show({
-        message: 'Your purchase was succesfull',
-        title: 'Transaction Status',
-        variant: 'success'
-      })   
-    } else {
-      notification.show({
-        message: 'Your purchase could not be processed', 
-        title: 'Transaction Status',
-        variant: 'error'
-    })
-    }
-  }
-  
   return (
     <>
-      <Card onClick={onClick} _hover={{
+      <Card _hover={{
         bg: hover ? 'gray.50' : 'none',
         transform: hover ? 'translateY(-2px)' : 'none',
-        cursor: hover ? 'pointer' : 'default',
         transition: 'all .2s ease-in-out'
       }} mb={8} overflow='hidden'>
         <Box position='relative' h='16rem' >
@@ -86,7 +43,12 @@ const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, 
         <CardBody >
           <Flex pt={4} flexDir='column' w='full' gap={2}>
             {badge && <Badge className=' w-fit py-1 px-2'>{badge}</Badge>}
-            <Text as='strong'>{title}</Text>
+            <Text color={link ? 'blue.500' : ''} _hover={{
+              textDecoration: hover ? 'underline' : 'none',
+              cursor: hover ? 'pointer' : 'default',
+              transition: 'all .2s ease-in-out'
+            }} onClick={onClick}
+              as='strong'>{title}</Text>
             <Flex className=' items-center justify-between flex-wrap' >
               <Text>{wallet}</Text>
               <Text textAlign='end' as='strong'>{walletAddress}</Text>
