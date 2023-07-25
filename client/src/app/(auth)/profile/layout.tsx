@@ -10,9 +10,9 @@ const ProfileRootLayout = ({ children }: ProfileRootLayoutProps) => {
   return (
     <>
       <Grid gridTemplateColumns='repeat(6,1fr)'>
-        <GridItem minH={{
+        <GridItem maxH={{
           base: 'auto',
-          lg: '100vh'
+          md: '100vh'
         }} colSpan={{
           base: 6,
           lg: 2,
@@ -20,7 +20,7 @@ const ProfileRootLayout = ({ children }: ProfileRootLayoutProps) => {
         }} bg='gray.200' >
           <ProfileNavbar />
         </GridItem>
-        <GridItem colSpan={{
+        <GridItem h='100vh' overflowY='auto' colSpan={{
           base: 6,
           lg: 4,
           xl: 5

@@ -9,12 +9,13 @@ interface ButtonTypeProps {
   bgModified?: string
   className?: string
   color?: string
+  type?: HTMLButtonElement['type']
 }
 
 
-const ButtonType = ({ onClick, border, bgColor, label, bgModified, color, className }: ButtonTypeProps) => {
+const ButtonType = ({ onClick, border, bgColor, type, label, bgModified, color, className }: ButtonTypeProps) => {
   return (
-    <Button border={`1px solid ${border}`} color={color} _focus={{
+    <Button type={type} border={`1px solid ${border}`} color={color} _focus={{
       bg: bgModified
     }} _hover={{
       bg: bgModified
