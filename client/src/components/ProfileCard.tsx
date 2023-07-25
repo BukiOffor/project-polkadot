@@ -36,8 +36,8 @@ const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, 
       address: '0x771ABC39aA6dDa99D3b3cBb8ea63B19b7472f68c', //contractAddresses[chain?.id][0] 
       abi: abi,
       functionName: 'pay',
-      args: [0, "0xf9808e0a01C513720e7878cF4Ca719ec53310fD8", BigInt(0.00000001 * 1e18)],
-      value: BigInt(ethers.utils.parseEther("0.00000001").toString()),
+      args: [0, "0xf9808e0a01C513720e7878cF4Ca719ec53310fD8", BigInt(0.2 * 1e18)],
+      value: BigInt(ethers.utils.parseEther("0.2").toString()),
     })        
     const { hash } = await writeContract(config)
     notification.show({
