@@ -11,7 +11,7 @@ interface ProviderProps {
 
 export function Providers({ children }: ProviderProps) {
   return (
-    <NotificationProvider config={{position: 'top-right',isCloseable: false,showTitle: true,showIcon: true,duration: 5,}}>
+    <NotificationProvider config={{position: 'top-right',isCloseable: true,showTitle: true,showIcon: true,duration: 12,}}>
     <CacheProvider>
         <ChakraProvider>
         {children}

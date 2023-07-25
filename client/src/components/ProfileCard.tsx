@@ -40,6 +40,11 @@ const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, 
       value: BigInt(ethers.utils.parseEther("0.00000001").toString()),
     })        
     const { hash } = await writeContract(config)
+    notification.show({
+      message: 'Wait for Transaction Result',
+      title: 'Transacrion Status',
+      variant: 'info'
+    })   
     const data =  await waitForTransaction({
       confirmations: 1,
       hash,
@@ -49,13 +54,13 @@ const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, 
       console.log(data);
       notification.show({
         message: 'Your purchase was succesfull',
-        title: 'Delivery Status',
+        title: 'Transaction Status',
         variant: 'success'
       })   
     } else {
       notification.show({
         message: 'Your purchase could not be processed', 
-        title: 'Delivery Status',
+        title: 'Transaction Status',
         variant: 'error'
     })
     }
