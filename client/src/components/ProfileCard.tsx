@@ -28,12 +28,12 @@ interface ProfileCardProps {
 
 
 
-const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, price, icon: Icon, hover, onClick,link }: ProfileCardProps) => {
+const ProfileCard = ({ image, title, description, wallet, walletAddress, badge, price, icon: Icon, hover, onClick, link }: ProfileCardProps) => {
   const account = getAccount()
   const notification = useNotification()
 
 
-async function gateway() {
+  async function gateway() {
 
     const config = await prepareWriteContract({
       //@ts-ignore
@@ -42,14 +42,14 @@ async function gateway() {
       functionName: 'pay',
       args: [0, "0xf9808e0a01C513720e7878cF4Ca719ec53310fD8", BigInt(0.2 * 1e18)],
       value: BigInt(ethers.utils.parseEther("0.2").toString()),
-    })        
+    })
     const { hash } = await writeContract(config)
     notification.show({
       message: 'Wait while your transaction is being processed',
       title: 'Transaction Status',
       variant: 'info'
-    })   
-    const data =  await waitForTransaction({
+    })
+    const data = await waitForTransaction({
       confirmations: 1,
       hash,
     })
@@ -57,16 +57,16 @@ async function gateway() {
       // CALL ANN'S API HERE
       console.log(data);
       notification.show({
-        message: 'Your purchase was succesfull',
+        message: 'Your purchase was successful',
         title: 'Transaction Status',
         variant: 'success'
-      })   
+      })
     } else {
       notification.show({
-        message: 'Your purchase could not be processed', 
+        message: 'Your purchase could not be processed',
         title: 'Transaction Status',
         variant: 'error'
-    })
+      })
     }
   }
   return (
@@ -82,7 +82,7 @@ async function gateway() {
         <CardBody >
           <Flex pt={4} flexDir='column' w='full' gap={2}>
             {badge && <Badge className=' w-fit py-1 px-2'>{badge}</Badge>}
-            <Text color={ link ? 'blue.500' : ''} _hover={{
+            <Text color={link ? 'blue.500' : ''} _hover={{
               textDecoration: hover ? 'underline' : 'none',
               cursor: hover ? 'pointer' : 'default',
               transition: 'all .2s ease-in-out'
@@ -96,7 +96,7 @@ async function gateway() {
             <Flex className=' items-center gap-1 text-purple-700 text-md cursor-pointer w-fit' onClick={async () => {
               account.isConnected ?
                 await gateway()
-                :alert("Please Connect your Wallet")
+                : alert("Please Connect your Wallet")
             }} >
               <Text>{price}</Text>
               {Icon && <Icon size={24} />}
